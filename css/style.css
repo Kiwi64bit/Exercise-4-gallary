@@ -1,0 +1,154 @@
+@keyframes shake {
+    0% {
+        rotate: 0deg;
+    }
+
+    10% {
+        rotate: 5deg;
+    }
+
+    20% {
+        rotate: -5deg;
+    }
+
+    30% {
+        rotate: 5deg;
+    }
+
+    40% {
+        rotate: -5deg;
+    }
+
+    50% {
+        rotate: 5deg;
+    }
+
+    60% {
+        rotate: -5deg;
+    }
+
+    70% {
+        rotate: 5deg;
+    }
+
+    80% {
+        rotate: -5deg;
+    }
+
+    90% {
+        rotate: 5deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+@keyframes expand {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+:root {
+    --goldColor: #f9ec31;
+}
+
+.fs-sm {
+    font-size: min(1rem, 3vw);
+}
+
+body {
+    background: #0f2027;
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+.shake {
+    animation: shake 500ms ease 0s;
+}
+
+.expand{
+    animation: expand 500ms ease 0s;
+}
+
+.popup {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 500ms, z-index 500ms;
+}
+
+.popup.show {
+    opacity: 1;
+    z-index: 999
+}
+
+.popup .popup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--goldColor);
+    aspect-ratio: 1 / 1;
+    width: 2em;
+    border-radius: 50%;
+    background: #0f2027;
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    border: none;
+    outline: none;
+    box-shadow: #ffffff10 0 0 0.5em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup .popup-btn.active {
+    background: white;
+}
+
+.popup .popup-content .image {
+    aspect-ratio: 1 / 1;
+    width: min(500px, 80%);
+}
+
+.gallery-card {
+    aspect-ratio: 1 / 1;
+    width: min(250px, 100%);
+}
+
+.gallery-card img {
+    transition: scale 500ms;
+}
+
+.gallery-card .layout {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.gallery-card .layout .icon {
+    color: white;
+    cursor: pointer;
+    transition: rotate 500ms, color 500ms;
+}
+
+.gallery-card:hover .layout {
+    opacity: 1;
+}
+
+.gallery-card:hover img {
+    scale: 1.2;
+}
+
+.gallery-card .layout .icon:hover {
+    color: gold;
+    rotate: 180deg;
+}

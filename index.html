@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 04: Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div
+        class="popup d-flex justify-content-center align-items-center vw-100 vh-100 position-fixed top-0 start-0 fs-sm">
+        <div class="overlay position-absolute w-100 h-100 top-0 left-0"></div>
+        <div class="popup-content container d-flex justify-content-center align-items-center">
+            <div class="image position-relative rounded-4 overflow-hidden">
+                <img src="images/image_01.jpg" class="img-fluid" alt="">
+                <button class="popup-btn popup-btn--close position-absolute" style="top: 5%; right: 5%;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button class="popup-btn popup-btn--previous position-absolute top-50 translate-middle-y"
+                    style="left: 5%;">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="popup-btn popup-btn--next position-absolute top-50 translate-middle-y"
+                    style="right: 5%;">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+                <ul class="indicators-container w-100 d-flex gap-2 m-0 justify-content-center align-items-center position-absolute start-0 list-unstyled"
+                    style="bottom: 5%;">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main id="Gallery">
+        <div class="container p-5">
+            <div class="card-container row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="gallery-card position-relative mx-auto rounded-3 overflow-hidden" data-index="0">
+                        <img src="images/image_01.jpg" class="img-fluid" alt="">
+                        <div
+                            class="layout d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                            <i class="icon fs-3 fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-card position-relative mx-auto rounded-3 overflow-hidden" data-index="1">
+                        <img src="images/image_02.jpg" class="img-fluid" alt="">
+                        <div
+                            class="layout d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                            <i class="icon fs-3 fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-card position-relative mx-auto rounded-3 overflow-hidden" data-index="2">
+                        <img src="images/image_03.jpg" class="img-fluid" alt="">
+                        <div
+                            class="layout d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                            <i class="icon fs-3 fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-card position-relative mx-auto rounded-3 overflow-hidden" data-index="3">
+                        <img src="images/image_04.jpg" class="img-fluid" alt="">
+                        <div
+                            class="layout d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                            <i class="icon fs-3 fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-card position-relative mx-auto rounded-3 overflow-hidden" data-index="4">
+                        <img src="images/image_05.jpg" class="img-fluid" alt="">
+                        <div
+                            class="layout d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                            <i class="icon fs-3 fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-card position-relative mx-auto rounded-3 overflow-hidden" data-index="5">
+                        <img src="images/image_06.jpg" class="img-fluid" alt="">
+                        <div
+                            class="layout d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                            <i class="icon fs-3 fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col">
+                    <div class="gallery-card position-relative mx-auto rounded-3 overflow-hidden" data-index="6">
+                        <img src="images/image_07.jpg" class="img-fluid" alt="">
+                        <div
+                            class="layout d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                            <i class="icon fs-3 fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-card position-relative mx-auto rounded-3 overflow-hidden" data-index="7">
+                        <img src="images/image_08.jpg" class="img-fluid" alt="">
+                        <div
+                            class="layout d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                            <i class="icon fs-3 fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="gallery-card position-relative mx-auto rounded-3 overflow-hidden" data-index="8">
+                        <img src="images/image_09.jpg" class="img-fluid" alt="">
+                        <div
+                            class="layout d-flex justify-content-center align-items-center w-100 h-100 position-absolute top-0 start-0">
+                            <i class="icon fs-3 fa-regular fa-square-plus"></i>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
