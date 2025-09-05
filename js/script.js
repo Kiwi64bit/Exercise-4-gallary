@@ -152,10 +152,16 @@ indicatorsContainer.append(...indicators);
 
 // Attaching event listeners
 galleryCards.forEach((card) => attachEventListenerToCardsIcons(card));
+
+//close popup
 popupOverlay.addEventListener("click", closePopup);
 closeButton.addEventListener("click", closePopup);
+
+//navigation keys
 previousButton.addEventListener("click", previousImage);
 nextButton.addEventListener("click", nextImage);
+
+//keyboard inputs
 document.addEventListener("keyup", (event) =>
     handleKeyboardInputs(event.key, Controls)
 );
